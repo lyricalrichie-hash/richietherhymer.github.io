@@ -6,33 +6,83 @@
   <title>Richie The Rhymer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: black;
-      color: white;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #000000, #1a1a1a);
+      color: #fff;
       text-align: center;
-      padding: 50px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    header {
+      padding: 40px 20px;
     }
     h1 {
-      font-size: 3em;
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+      color: #00ff99;
+    }
+    p.tagline {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #ccc;
+    }
+    .social-links {
+      margin: 30px 0;
+    }
+    .social-links a {
+      margin: 0 10px;
+      color: #00ff99;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #fff;
+    }
+    section {
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      background: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,255,153,0.2);
+    }
+    section h2 {
+      color: #00ff99;
       margin-bottom: 10px;
     }
-    p {
-      font-size: 1.2em;
-      margin-top: 0;
-    }
-    a {
-      color: #00ff99;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
+    footer {
+      margin-top: auto;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>Richie The Rhymer</h1>
-  <p>Welcome to my official site. Big things coming soon...</p>
-  <p><a href="https://youtube.com">Check out my music</a></p>
+  <header>
+    <h1>Richie The Rhymer</h1>
+    <p class="tagline">Conscious Hip-Hop Artist | 5-Album Project in Motion</p>
+  </header>
+
+  <div class="social-links">
+    <a href="https://youtube.com" target="_blank">YouTube</a>
+    <a href="https://soundcloud.com" target="_blank">SoundCloud</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="mailto:your@email.com">Contact</a>
+  </div>
+
+  <section>
+    <h2>🔥 Latest Update</h2>
+    <p>Big drops are coming soon — five albums, pure rhymes, no filler. Stay tuned here for updates and exclusive previews.</p>
+  </section>
+
+  <footer>
+    © 2025 Richie The Rhymer. All Rights Reserved.
+  </footer>
 </body>
 </html>
