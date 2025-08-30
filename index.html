@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richie The Rhymer</title>
-  <style>
-    body { background-color: #000; color: #fff; font-family: Arial, sans-serif; text-align: center; }
-    h1 { margin-top: 50px; }
-    .video-preview { margin-top: 30px; max-width: 90%; height: auto; }
-    .section { margin: 50px 0; }
-    .button { display: inline-block; padding: 10px 20px; margin: 10px; background: #ff4500; color: #fff; text-decoration: none; border-radius: 5px; }
-  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richie The Rhymer - Official Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Babel for in-browser JSX & TypeScript transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      /* Custom scrollbar for a better look on dark theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a202c; /* dark gray */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4a5568; /* medium gray */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #718096; /* light gray */
+      }
+
+      /* Animation for floating music symbols */
+      @keyframes float {
+        0% {
+          transform: translateY(0) translateX(0);
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.5;
+        }
+        75% {
+          opacity: 0.5;
+        }
+        100% {
+          transform: translateY(-110vh) translateX(var(--float-x-end));
+          opacity: 0;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
 </head>
-<body>
-
-  <h1>Richie The Rhymer — Truth or Music You Wouldn't Believe</h1>
-
-  <div class="section">
-    <h2>Latest Update 🔥</h2>
-    <p>XXXX</p>
-  </div>
-
-  <div class="section">
-    <h2>Studio Preview</h2>
-    <video class="video-preview" controls>
-      <source src="WhoAmItheOfficialVideo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="section">
-    <a class="button" href="XXXX">YouTube</a>
-    <a class="button" href="mailto:XXXX">Contact</a>
-  </div>
-
-</body>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <!-- Changed script type to "text/babel" and added data-type="module" for Babel to process the TSX file and its imports correctly -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+  </body>
 </html>
